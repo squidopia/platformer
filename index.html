@@ -3,23 +3,44 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Simple Platformer</title>
+<title>Simple Platformer - Level Select</title>
 <style>
   body {
     margin: 0;
-    background: #87ceeb; /* sky blue */
-    overflow: hidden;
+    background: #87ceeb;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  #level-select {
+    margin: 20px;
+  }
+  #level-select button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
   }
   canvas {
+    background: #c2f0c2;
     display: block;
-    margin: 0 auto;
-    background: #c2f0c2; /* light green ground */
   }
 </style>
 </head>
 <body>
-<canvas id="game" width="640" height="360"></canvas>
+
+<div id="level-select">
+  <button data-level="0">Level 1</button>
+  <button data-level="1">Level 2</button>
+  <button data-level="2">Level 3</button>
+  <button data-level="3">Level 4</button>
+  <button data-level="4">Level 5</button>
+</div>
+
+<canvas id="game" width="640" height="360" style="display:none;"></canvas>
 
 <script src="game.js"></script>
 </body>
